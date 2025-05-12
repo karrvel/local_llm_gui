@@ -169,17 +169,9 @@ static void* receive_messages(void *arg) {
             // Reset error counter on successful receive
             consecutive_errors = 0;
             
-            // Make a copy of the buffer for the GUI to avoid memory issues
-            char *message_copy = strdup(buffer);
-            if (message_copy) {
-                // Add message to GUI
-                gui_add_message(message_copy, false);
-                // The gui_add_message function makes its own copy, so we can free this one
-                free(message_copy);
-            } else {
-                // Memory allocation failed
-                gui_show_error("Memory allocation failed");
-            }
+            // No need to create a separate copy since gui_add_message already creates one
+            // Just pass the buffer directly to avoid double memory allocation
+            gui_add_message(buffer, false);
         }
     }
     
