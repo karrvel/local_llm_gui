@@ -1,0 +1,57 @@
+# Compiled object files, libraries, executables
+*.o
+*.ko
+*.obj
+*.elf
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.la
+*.lo
+*.lib
+*.exe
+*.out
+*.app
+
+# Build artifacts and binaries
+/bin/
+/build/
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Project specific
+/config.json
+
+# Dependency directories
+/deps/
+
+# Generated documentation
+/docs/
+
+# Test executables and test output
+/test_ollama
